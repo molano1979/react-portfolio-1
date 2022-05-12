@@ -42,7 +42,7 @@ const About = () => {
 
           </div>
 <p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur id ipsa iusto minima modi laboriosam maiores dolores facilis quisquam, quia soluta aliquam, aliquid ratione! Sed ea nisi eum. Odio!
+My goal is to become an accomplished coder and programmer, and use my skills to contribute to exciting technological advances.
 </p>
 
 <a href="#contact" className='btn btn-primary'>Let's Talk</a>
