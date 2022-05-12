@@ -21,13 +21,13 @@ const About = () => {
         <div className="about_content">
           <div className="about_cards">
             <article className='about_card'>
-              <FaAward className='about_icon' />
+              <FaAward className='about_icon'/>
               <h5>Experience</h5>
               <small></small>
 
             </article>
             <article className='about_card'>
-              <FiUsers className='about_icon' />
+              <FiUsers className='about_icon'/>
               <h5>Clients</h5>
               <small></small>
 
