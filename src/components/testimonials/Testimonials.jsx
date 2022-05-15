@@ -5,58 +5,65 @@ import AVTR2 from '../../assets/avatar2.jpg'
 import AVTR3 from '../../assets/avatar3.jpg'
 import AVTR4 from '../../assets/avatar4.jpg'
 
+// import Swiper core and required modules
+import { Pagination } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+const data = [
+  {
+    avatar: AVTR1,
+    name: 'Camila & Javier',
+    review: 'Modi alias animi dolorem aliquam ea eum beatae maiores, consectetur praesentium quibusdam, commodi velit porro blanditiis consequatur qui molestiae. Dolorem, perspiciatis aspernatur labore distinctio ratione delectus voluptatem dolores deserunt explicabo nostrum ducimus quasi?'
+  },
+  {
+    avatar: AVTR2,
+    name: 'Javier Molano',
+    review: 'Modi alias animi dolorem aliquam ea eum beatae maiores, consectetur praesentium quibusdam, commodi velit porro blanditiis consequatur qui molestiae. Dolorem, perspiciatis aspernatur labore distinctio ratione delectus voluptatem dolores deserunt explicabo nostrum ducimus quasi?'
+  },
+  {
+    avatar: AVTR3,
+    name: 'Richard Cady',
+    review: 'Modi alias animi dolorem aliquam ea eum beatae maiores, consectetur praesentium quibusdam, commodi velit porro blanditiis consequatur qui molestiae. Dolorem, perspiciatis aspernatur labore distinctio ratione delectus voluptatem dolores deserunt explicabo nostrum ducimus quasi?'
+  },
+  {
+    avatar: AVTR4,
+    name: 'Sofia!',
+    review: 'Modi alias animi dolorem aliquam ea eum beatae maiores, consectetur praesentium quibusdam, commodi velit porro blanditiis consequatur qui molestiae. Dolorem, perspiciatis aspernatur labore distinctio ratione delectus voluptatem dolores deserunt explicabo nostrum ducimus quasi?'
+  },
+]
+
 const Testimonials = () => {
   return (
     <section id='testimonials'>
-<h5>Reviews from clients</h5>
-<h2>Testimonials</h2>
+      <h5>Review from clients</h5>
+      <h2>Testimonials</h2>
 
-<div className="container testimonials_container">
-  <article className="testimonial">
-    <div className="client_avitar">
-      <img src={AVTR1} alt="Avatar One" />
-      <h5 className='client_name'>Ernest Achiever</h5>
-      <small className='client_review'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas, eum debitis modi ad commodi dolorem error et fuga facere quam omnis consequuntur, hic animi placeat alias ab? Consequuntur, aperiam?
-      </small>
-    </div>
-  </article>
-
-  <article className="testimonial">
-    <div className="client_avitar">
-      <img src={AVTR2} alt="Avatar One" />
-      <h5 className='client_name'>Ernest Achiever</h5>
-      <small className='client_review'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas, eum debitis modi ad commodi dolorem error et fuga facere quam omnis consequuntur, hic animi placeat alias ab? Consequuntur, aperiam?
-      </small>
-    </div>
-  </article>
-
-  <article className="testimonial">
-    <div className="client_avitar">
-      <img src={AVTR3} alt="Avatar One" />
-      <h5 className='client_name'>Ernest Achiever</h5>
-      <small className='client_review'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas, eum debitis modi ad commodi dolorem error et fuga facere quam omnis consequuntur, hic animi placeat alias ab? Consequuntur, aperiam?
-      </small>
-    </div>
-  </article>
-
-  <article className="testimonial">
-    <div className="client_avitar">
-      <img src={AVTR4} alt="Avatar One" />
-      <h5 className='client_name'>Ernest Achiever</h5>
-      <small className='client_review'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas, eum debitis modi ad commodi dolorem error et fuga facere quam omnis consequuntur, hic animi placeat alias ab? Consequuntur, aperiam?
-      </small>
-    </div>
-  </article>
-
-</div>
-
+      <Swiper className="container testimonials__container"
+        // install Swiper modules
+        modules={[Pagination]} spaceBetween={40}
+        slidesPerView={1}
+        pagination={{ clickable: true }}>
+        {
+          data.map(({ avatar, name, review }, index) => {
+            return (
+              <SwiperSlide key={index} className="testimonial">
+                <div className="client__avatar">
+                  <img src={avatar} />
+                </div>
+                <h5 className='client__name'>{name}</h5>
+                <small className='client__review'>{review}</small>
+              </SwiperSlide>
+            )
+          })
+        }
+      </Swiper>
     </section>
-    
-  )
+  );
 }
 
 export default Testimonials
