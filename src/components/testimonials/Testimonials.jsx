@@ -10,10 +10,45 @@ const Testimonials = () => {
     <section id='testimonials'>
 <h5>Reviews from clients</h5>
 <h2>Testimonials</h2>
+
 <div className="container testimonials_container">
   <article className="testimonial">
     <div className="client_avitar">
       <img src={AVTR1} alt="Avatar One" />
+      <h5 className='client_name'>Ernest Achiever</h5>
+      <small className='client_review'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas, eum debitis modi ad commodi dolorem error et fuga facere quam omnis consequuntur, hic animi placeat alias ab? Consequuntur, aperiam?
+      </small>
+    </div>
+  </article>
+
+  <article className="testimonial">
+    <div className="client_avitar">
+      <img src={AVTR2} alt="Avatar One" />
+      <h5 className='client_name'>Ernest Achiever</h5>
+      <small className='client_review'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas, eum debitis modi ad commodi dolorem error et fuga facere quam omnis consequuntur, hic animi placeat alias ab? Consequuntur, aperiam?
+      </small>
+    </div>
+  </article>
+
+  <article className="testimonial">
+    <div className="client_avitar">
+      <img src={AVTR3} alt="Avatar One" />
+      <h5 className='client_name'>Ernest Achiever</h5>
+      <small className='client_review'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas, eum debitis modi ad commodi dolorem error et fuga facere quam omnis consequuntur, hic animi placeat alias ab? Consequuntur, aperiam?
+      </small>
+    </div>
+  </article>
+
+  <article className="testimonial">
+    <div className="client_avitar">
+      <img src={AVTR4} alt="Avatar One" />
+      <h5 className='client_name'>Ernest Achiever</h5>
+      <small className='client_review'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas, eum debitis modi ad commodi dolorem error et fuga facere quam omnis consequuntur, hic animi placeat alias ab? Consequuntur, aperiam?
+      </small>
     </div>
   </article>
 
