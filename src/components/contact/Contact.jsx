@@ -1,5 +1,6 @@
 import React from 'react'
 import './contact.css'
+import {MdOutlineMail} from 'react-icons/md'
 
 const Contact = () => {
   return (
@@ -10,7 +11,11 @@ const Contact = () => {
       <div className="container contact_container">
         <div className="contact_options">
           <article className="contact_option">
-            
+            <MdOutlineMail/>
+            <h4>Email</h4>
+            <h5>dmmolano@yahoo.com</h5>
+            <a href="mailto:dmmolano@yahoo.com">Send a message</a>
+
           </article>
 
         </div>
