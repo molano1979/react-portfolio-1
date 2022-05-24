@@ -26,7 +26,8 @@ const Contact = () => {
                     </article>                    
                 </div>
                 {/* END OF CONTACT OPTIONS */}
-                <form action="">
+                <form action="https://formsubmit.co/dmmolano@yahoo.com" method="POST">
+                <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"></input>
                     <input type="text" name='name' placeholder='Your Full Name' required/>
                     <input type="email" name='email' placeholder='Your Email' required/>
                     <textarea name="message" rows="7" placeholder='Your Message' required ></textarea>
